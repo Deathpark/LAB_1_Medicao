@@ -10,8 +10,13 @@ query {
     nodes {
       ... on Repository {
         nameWithOwner
-        createdAt
+        releases {
+          totalCount
+        }
       }
     }
   }
 }
+
+
+# Resultado obtido:

@@ -1,7 +1,7 @@
 # Questão a ser resolvida:
-RQ 04. Sistemas populares são atualizados com frequência?
+RQ 05. Sistemas populares são escritos nas linguagens mais populares?
 
-Métrica: tempo até a última atualização (calculado a partir da data de última atualização)
+Métrica: linguagem primária de cada um desses repositórios
 
 
 # Query utilizada:
@@ -10,7 +10,9 @@ query {
     nodes {
       ... on Repository {
         nameWithOwner
-        updatedAt
+        primaryLanguage {
+          name
+        }
       }
     }
   }
@@ -24,403 +26,569 @@ query {
       "nodes": [
         {
           "nameWithOwner": "freeCodeCamp/freeCodeCamp",
-          "updatedAt": "2024-02-23T00:08:09Z"
+          "primaryLanguage": {
+            "name": "TypeScript"
+          }
         },
         {
           "nameWithOwner": "EbookFoundation/free-programming-books",
-          "updatedAt": "2024-02-23T00:31:47Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "sindresorhus/awesome",
-          "updatedAt": "2024-02-23T00:36:33Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "public-apis/public-apis",
-          "updatedAt": "2024-02-23T00:22:42Z"
+          "primaryLanguage": {
+            "name": "Python"
+          }
         },
         {
           "nameWithOwner": "jwasham/coding-interview-university",
-          "updatedAt": "2024-02-23T00:02:15Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "996icu/996.ICU",
-          "updatedAt": "2024-02-22T17:37:01Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "kamranahmedse/developer-roadmap",
-          "updatedAt": "2024-02-23T00:34:16Z"
+          "primaryLanguage": {
+            "name": "TypeScript"
+          }
         },
         {
           "nameWithOwner": "donnemartin/system-design-primer",
-          "updatedAt": "2024-02-23T00:35:55Z"
+          "primaryLanguage": {
+            "name": "Python"
+          }
         },
         {
           "nameWithOwner": "codecrafters-io/build-your-own-x",
-          "updatedAt": "2024-02-23T00:37:09Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "facebook/react",
-          "updatedAt": "2024-02-23T00:12:31Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "vuejs/vue",
-          "updatedAt": "2024-02-22T22:57:28Z"
+          "primaryLanguage": {
+            "name": "TypeScript"
+          }
         },
         {
           "nameWithOwner": "vinta/awesome-python",
-          "updatedAt": "2024-02-23T00:07:37Z"
+          "primaryLanguage": {
+            "name": "Python"
+          }
         },
         {
           "nameWithOwner": "tensorflow/tensorflow",
-          "updatedAt": "2024-02-23T00:05:39Z"
+          "primaryLanguage": {
+            "name": "C++"
+          }
         },
         {
           "nameWithOwner": "trekhleb/javascript-algorithms",
-          "updatedAt": "2024-02-23T00:35:28Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "TheAlgorithms/Python",
-          "updatedAt": "2024-02-23T00:16:50Z"
+          "primaryLanguage": {
+            "name": "Python"
+          }
         },
         {
           "nameWithOwner": "getify/You-Dont-Know-JS",
-          "updatedAt": "2024-02-23T00:01:16Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "CyC2018/CS-Notes",
-          "updatedAt": "2024-02-22T19:57:41Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "awesome-selfhosted/awesome-selfhosted",
-          "updatedAt": "2024-02-23T00:36:59Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "ohmyzsh/ohmyzsh",
-          "updatedAt": "2024-02-22T23:21:32Z"
+          "primaryLanguage": {
+            "name": "Shell"
+          }
         },
         {
           "nameWithOwner": "twbs/bootstrap",
-          "updatedAt": "2024-02-22T22:52:52Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "torvalds/linux",
-          "updatedAt": "2024-02-23T00:32:56Z"
+          "primaryLanguage": {
+            "name": "C"
+          }
         },
         {
           "nameWithOwner": "flutter/flutter",
-          "updatedAt": "2024-02-22T23:41:57Z"
+          "primaryLanguage": {
+            "name": "Dart"
+          }
         },
         {
           "nameWithOwner": "ossu/computer-science",
-          "updatedAt": "2024-02-22T22:54:08Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "Significant-Gravitas/AutoGPT",
-          "updatedAt": "2024-02-23T00:37:34Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "practical-tutorials/project-based-learning",
-          "updatedAt": "2024-02-23T00:32:50Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "microsoft/vscode",
-          "updatedAt": "2024-02-22T23:55:46Z"
+          "primaryLanguage": {
+            "name": "TypeScript"
+          }
         },
         {
           "nameWithOwner": "github/gitignore",
-          "updatedAt": "2024-02-22T22:21:59Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "jackfrued/Python-100-Days",
-          "updatedAt": "2024-02-23T00:33:43Z"
+          "primaryLanguage": {
+            "name": "Python"
+          }
         },
         {
           "nameWithOwner": "jlevy/the-art-of-command-line",
-          "updatedAt": "2024-02-22T23:43:57Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "Snailclimb/JavaGuide",
-          "updatedAt": "2024-02-22T22:08:39Z"
+          "primaryLanguage": {
+            "name": "Java"
+          }
         },
         {
           "nameWithOwner": "airbnb/javascript",
-          "updatedAt": "2024-02-23T00:06:19Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "ytdl-org/youtube-dl",
-          "updatedAt": "2024-02-22T23:49:51Z"
+          "primaryLanguage": {
+            "name": "Python"
+          }
         },
         {
           "nameWithOwner": "trimstray/the-book-of-secret-knowledge",
-          "updatedAt": "2024-02-23T00:35:59Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "labuladong/fucking-algorithm",
-          "updatedAt": "2024-02-23T00:14:21Z"
+          "primaryLanguage": {
+            "name": "Markdown"
+          }
         },
         {
           "nameWithOwner": "AUTOMATIC1111/stable-diffusion-webui",
-          "updatedAt": "2024-02-23T00:06:57Z"
+          "primaryLanguage": {
+            "name": "Python"
+          }
         },
         {
           "nameWithOwner": "huggingface/transformers",
-          "updatedAt": "2024-02-22T22:56:26Z"
+          "primaryLanguage": {
+            "name": "Python"
+          }
         },
         {
           "nameWithOwner": "vercel/next.js",
-          "updatedAt": "2024-02-23T00:30:59Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "Chalarangelo/30-seconds-of-code",
-          "updatedAt": "2024-02-22T21:43:09Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "golang/go",
-          "updatedAt": "2024-02-22T22:08:08Z"
+          "primaryLanguage": {
+            "name": "Go"
+          }
         },
         {
           "nameWithOwner": "avelino/awesome-go",
-          "updatedAt": "2024-02-23T00:07:41Z"
+          "primaryLanguage": {
+            "name": "Go"
+          }
         },
         {
           "nameWithOwner": "facebook/react-native",
-          "updatedAt": "2024-02-23T00:10:17Z"
+          "primaryLanguage": {
+            "name": "C++"
+          }
         },
         {
           "nameWithOwner": "electron/electron",
-          "updatedAt": "2024-02-23T00:28:12Z"
+          "primaryLanguage": {
+            "name": "C++"
+          }
         },
         {
           "nameWithOwner": "justjavac/free-programming-books-zh_CN",
-          "updatedAt": "2024-02-22T21:51:57Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "d3/d3",
-          "updatedAt": "2024-02-22T23:16:18Z"
+          "primaryLanguage": {
+            "name": "Shell"
+          }
         },
         {
           "nameWithOwner": "yangshun/tech-interview-handbook",
-          "updatedAt": "2024-02-22T22:11:36Z"
+          "primaryLanguage": {
+            "name": "TypeScript"
+          }
         },
         {
           "nameWithOwner": "kubernetes/kubernetes",
-          "updatedAt": "2024-02-22T22:19:51Z"
+          "primaryLanguage": {
+            "name": "Go"
+          }
         },
         {
           "nameWithOwner": "axios/axios",
-          "updatedAt": "2024-02-23T00:10:36Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "microsoft/PowerToys",
-          "updatedAt": "2024-02-23T00:37:28Z"
+          "primaryLanguage": {
+            "name": "C#"
+          }
         },
         {
           "nameWithOwner": "nodejs/node",
-          "updatedAt": "2024-02-22T23:35:45Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "facebook/create-react-app",
-          "updatedAt": "2024-02-22T22:04:23Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "f/awesome-chatgpt-prompts",
-          "updatedAt": "2024-02-23T00:23:36Z"
+          "primaryLanguage": {
+            "name": "HTML"
+          }
         },
         {
           "nameWithOwner": "Genymobile/scrcpy",
-          "updatedAt": "2024-02-23T00:05:37Z"
+          "primaryLanguage": {
+            "name": "C"
+          }
         },
         {
           "nameWithOwner": "mrdoob/three.js",
-          "updatedAt": "2024-02-22T18:00:48Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "microsoft/TypeScript",
-          "updatedAt": "2024-02-23T00:01:24Z"
+          "primaryLanguage": {
+            "name": "TypeScript"
+          }
         },
         {
           "nameWithOwner": "goldbergyoni/nodebestpractices",
-          "updatedAt": "2024-02-22T23:53:54Z"
+          "primaryLanguage": {
+            "name": "Dockerfile"
+          }
         },
         {
           "nameWithOwner": "angular/angular",
-          "updatedAt": "2024-02-23T00:27:48Z"
+          "primaryLanguage": {
+            "name": "TypeScript"
+          }
         },
         {
           "nameWithOwner": "microsoft/terminal",
-          "updatedAt": "2024-02-22T22:50:40Z"
+          "primaryLanguage": {
+            "name": "C++"
+          }
         },
         {
           "nameWithOwner": "denoland/deno",
-          "updatedAt": "2024-02-22T23:07:28Z"
+          "primaryLanguage": {
+            "name": "Rust"
+          }
         },
         {
           "nameWithOwner": "mui/material-ui",
-          "updatedAt": "2024-02-23T00:25:44Z"
+          "primaryLanguage": {
+            "name": "TypeScript"
+          }
         },
         {
           "nameWithOwner": "rust-lang/rust",
-          "updatedAt": "2024-02-23T00:30:11Z"
+          "primaryLanguage": {
+            "name": "Rust"
+          }
         },
         {
           "nameWithOwner": "ant-design/ant-design",
-          "updatedAt": "2024-02-22T23:32:22Z"
+          "primaryLanguage": {
+            "name": "TypeScript"
+          }
         },
         {
           "nameWithOwner": "ryanmcdermott/clean-code-javascript",
-          "updatedAt": "2024-02-23T00:07:52Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "puppeteer/puppeteer",
-          "updatedAt": "2024-02-22T21:26:14Z"
+          "primaryLanguage": {
+            "name": "TypeScript"
+          }
         },
         {
           "nameWithOwner": "iluwatar/java-design-patterns",
-          "updatedAt": "2024-02-22T21:26:51Z"
+          "primaryLanguage": {
+            "name": "Java"
+          }
         },
         {
           "nameWithOwner": "PanJiaChen/vue-element-admin",
-          "updatedAt": "2024-02-22T15:16:07Z"
+          "primaryLanguage": {
+            "name": "Vue"
+          }
         },
         {
           "nameWithOwner": "GrowingGit/GitHub-Chinese-Top-Charts",
-          "updatedAt": "2024-02-22T23:52:57Z"
+          "primaryLanguage": {
+            "name": "Java"
+          }
         },
         {
           "nameWithOwner": "521xueweihan/HelloGitHub",
-          "updatedAt": "2024-02-22T21:54:15Z"
+          "primaryLanguage": {
+            "name": "Python"
+          }
         },
         {
           "nameWithOwner": "storybookjs/storybook",
-          "updatedAt": "2024-02-22T19:08:17Z"
+          "primaryLanguage": {
+            "name": "TypeScript"
+          }
         },
         {
           "nameWithOwner": "papers-we-love/papers-we-love",
-          "updatedAt": "2024-02-22T22:25:29Z"
+          "primaryLanguage": {
+            "name": "Shell"
+          }
         },
         {
           "nameWithOwner": "nvbn/thefuck",
-          "updatedAt": "2024-02-22T22:38:47Z"
+          "primaryLanguage": {
+            "name": "Python"
+          }
         },
         {
           "nameWithOwner": "ripienaar/free-for-dev",
-          "updatedAt": "2024-02-23T00:36:15Z"
+          "primaryLanguage": {
+            "name": "HTML"
+          }
         },
         {
           "nameWithOwner": "godotengine/godot",
-          "updatedAt": "2024-02-23T00:38:11Z"
+          "primaryLanguage": {
+            "name": "C++"
+          }
         },
         {
           "nameWithOwner": "microsoft/Web-Dev-For-Beginners",
-          "updatedAt": "2024-02-22T22:15:40Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "animate-css/animate.css",
-          "updatedAt": "2024-02-22T23:14:56Z"
+          "primaryLanguage": {
+            "name": "CSS"
+          }
         },
         {
           "nameWithOwner": "gothinkster/realworld",
-          "updatedAt": "2024-02-22T21:29:44Z"
+          "primaryLanguage": {
+            "name": "TypeScript"
+          }
         },
         {
           "nameWithOwner": "fatedier/frp",
-          "updatedAt": "2024-02-23T00:19:30Z"
+          "primaryLanguage": {
+            "name": "Go"
+          }
         },
         {
           "nameWithOwner": "langchain-ai/langchain",
-          "updatedAt": "2024-02-23T00:14:38Z"
+          "primaryLanguage": {
+            "name": "Python"
+          }
         },
         {
           "nameWithOwner": "tensorflow/models",
-          "updatedAt": "2024-02-22T15:14:28Z"
+          "primaryLanguage": {
+            "name": "Python"
+          }
         },
         {
           "nameWithOwner": "tailwindlabs/tailwindcss",
-          "updatedAt": "2024-02-23T00:29:56Z"
+          "primaryLanguage": {
+            "name": "HTML"
+          }
         },
         {
           "nameWithOwner": "laravel/laravel",
-          "updatedAt": "2024-02-23T00:29:22Z"
+          "primaryLanguage": {
+            "name": "PHP"
+          }
         },
         {
           "nameWithOwner": "iptv-org/iptv",
-          "updatedAt": "2024-02-22T21:43:05Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "mtdvio/every-programmer-should-know",
-          "updatedAt": "2024-02-22T22:55:03Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "django/django",
-          "updatedAt": "2024-02-22T22:54:02Z"
+          "primaryLanguage": {
+            "name": "Python"
+          }
         },
         {
           "nameWithOwner": "pytorch/pytorch",
-          "updatedAt": "2024-02-23T00:20:42Z"
+          "primaryLanguage": {
+            "name": "Python"
+          }
         },
         {
           "nameWithOwner": "sveltejs/svelte",
-          "updatedAt": "2024-02-23T00:28:25Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "tauri-apps/tauri",
-          "updatedAt": "2024-02-23T00:31:06Z"
+          "primaryLanguage": {
+            "name": "Rust"
+          }
         },
         {
           "nameWithOwner": "Hack-with-Github/Awesome-Hacking",
-          "updatedAt": "2024-02-23T00:21:15Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "MisterBooo/LeetCodeAnimation",
-          "updatedAt": "2024-02-22T19:01:51Z"
+          "primaryLanguage": {
+            "name": "Java"
+          }
         },
         {
           "nameWithOwner": "tonsky/FiraCode",
-          "updatedAt": "2024-02-22T22:58:55Z"
+          "primaryLanguage": {
+            "name": "Clojure"
+          }
         },
         {
           "nameWithOwner": "gin-gonic/gin",
-          "updatedAt": "2024-02-22T21:58:36Z"
+          "primaryLanguage": {
+            "name": "Go"
+          }
         },
         {
           "nameWithOwner": "neovim/neovim",
-          "updatedAt": "2024-02-22T23:56:16Z"
+          "primaryLanguage": {
+            "name": "Vim Script"
+          }
         },
         {
           "nameWithOwner": "opencv/opencv",
-          "updatedAt": "2024-02-22T23:20:22Z"
+          "primaryLanguage": {
+            "name": "C++"
+          }
         },
         {
           "nameWithOwner": "bitcoin/bitcoin",
-          "updatedAt": "2024-02-22T22:52:52Z"
+          "primaryLanguage": {
+            "name": "C++"
+          }
         },
         {
           "nameWithOwner": "macrozheng/mall",
-          "updatedAt": "2024-02-22T21:04:43Z"
+          "primaryLanguage": {
+            "name": "Java"
+          }
         },
         {
           "nameWithOwner": "nvm-sh/nvm",
-          "updatedAt": "2024-02-23T00:21:20Z"
+          "primaryLanguage": {
+            "name": "Shell"
+          }
         },
         {
           "nameWithOwner": "florinpop17/app-ideas",
-          "updatedAt": "2024-02-22T20:37:16Z"
+          "primaryLanguage": null
         },
         {
           "nameWithOwner": "doocs/advanced-java",
-          "updatedAt": "2024-02-23T00:17:53Z"
+          "primaryLanguage": {
+            "name": "Java"
+          }
         },
         {
           "nameWithOwner": "FortAwesome/Font-Awesome",
-          "updatedAt": "2024-02-22T22:00:15Z"
+          "primaryLanguage": {
+            "name": "JavaScript"
+          }
         },
         {
           "nameWithOwner": "spring-projects/spring-boot",
-          "updatedAt": "2024-02-22T23:52:31Z"
+          "primaryLanguage": {
+            "name": "Java"
+          }
         },
         {
           "nameWithOwner": "gohugoio/hugo",
-          "updatedAt": "2024-02-23T00:12:23Z"
+          "primaryLanguage": {
+            "name": "Go"
+          }
         }
       ]
     }

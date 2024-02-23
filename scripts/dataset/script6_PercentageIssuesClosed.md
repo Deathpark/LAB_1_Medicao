@@ -15,3 +15,6 @@ query {
     }
   }
 }
+
+
+# Resultado obtido:

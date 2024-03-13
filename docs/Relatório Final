@@ -1,0 +1,36 @@
+## Introdução
+A finalidade do trabalho era minerar repositórios populares e encontrar resultados como sistemas mais recentes, visto que os sistemas antigos tendem a ser legados, alta contribuição da comunidade mas não necessariamente utilizando linguagens mais populares, alto número de releases e atualizações também por motivos de atividade frequente da comunidade e baixo percentual de issues fechadas.
+
+## Metodologia Utilizada
+Foi feita a razão dos dados obtidos em relação ao todo, de forma que a busca pela resposta da hipótese criada fosse respondida de acordo com a razão. De acordo com a essa razão, foram obtidos os valores medianos de cada resposta, de forma que se pudesse ter de uma forma clara quais resultados correspondem as expectativas e quais não correspondem, demonstrando o metricamente o porque o valor não está de acordo com o esperado.
+
+## Resultados Obtidos
+RQ 01. Sistemas populares são maduros/antigos?
+
+Resultado: Cerca de 80% dos repositórios mais populares tem mais de 5 anos de criação.
+
+RQ 02. Sistemas populares recebem muita contribuição externa?
+
+Resultado: A grande maioria dos repositórios minerados tem mais de 600 pull requests aceitas, entretanto alguns repositórios não tem nem 100 pull requests aceitas.
+
+RQ 03. Sistemas populares lançam releases com frequência?
+
+Resultado: Poucas releases são lançadas para os sistemas mais populares.
+
+RQ 04. Sistemas populares são atualizados com frequência?
+
+Resultado: Cerca de 90% dos repositórios são atualizados mensalmente.
+
+RQ 05. Sistemas populares são escritos nas linguagens mais populares?
+
+Resultado: 170 repositórios utilizam a linguagem Python, 176 para JavaScript e 130 Typescript, sendo essas as mais utilizadas e também as mais populares.
+
+RQ 06. Sistemas populares possuem um alto percentual de issues fechadas?
+
+Resultado: Excluindo os repositórios que não possuem nenhuma issue aberta ou fechada, os repositórios mais populares tem cerca de 80% de issues fechadas no total.
+
+## Discussão
+- A primeira suposição seria de que os sistemas não seriam tão antigos pois tendem a ser legados, mas de fato os repositórios minerados apesar de serem mais maduros não são necessariamente legados
+- A grande maioria é atualizada mensalmente mas poucos repositórios tem uma quantidade considerável de releases.
+- A maioria é sim escrito nas linguagens mais populares e que estão sim bem estabelecidas no mercado. A hipótese original era de que as linguagens utilizadas seriam as mais tradicionais.
+- A hipótese sobre issues abertas e fechadas inicialmente era que novas issues seriam abertas na mesma proporção que as outras já existentes eram fechadas, mas essa suposição se provou errada visto que 80% do total de issues dos repositórios estão fechadas.

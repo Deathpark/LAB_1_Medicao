@@ -31,7 +31,7 @@ RQ 06. Sistemas populares possuem um alto percentual de issues fechadas?
 Métrica: razão entre número de issues fechadas pelo total de issues
 
 ### Relatório Final:
-Para cada uma questões de pesquisa anteriores, faça uma sumarização dos dados obtidos através de valores medianos Links to an external site.. Mesmo que de forma informal, elabore hipóteses sobre o que você espera de resposta e tente analisar a partir dos valores obtidos. Para valores de categoria (ex.: linguagem de programação), elabore uma contagem por categoria, para facilitar suas descobertas. 
+Para cada uma questões de pesquisa anteriores, faça uma sumarização dos dados obtidos através de valores medianos. Mesmo que de forma informal, elabore hipóteses sobre o que você espera de resposta e tente analisar a partir dos valores obtidos. Para valores de categoria (ex.: linguagem de programação), elabore uma contagem por categoria, para facilitar suas descobertas. 
 
 Elabore um documento que apresente 
 (i) uma introdução simples com hipóteses informais; 

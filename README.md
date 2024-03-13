@@ -12,6 +12,7 @@
 
 * Richbert Stephano de Faria Oliveira
 * Sara Lourenço Iglesias
+* Nelson Nolasco
 
 ## Artefatos:
 

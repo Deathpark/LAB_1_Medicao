@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 
 def consultar_repositorios(page):
-    token = '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'
+    token = ''
 
     query = """
     query pesquisa($page: String){

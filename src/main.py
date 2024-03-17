@@ -1,8 +1,5 @@
-import requedsts
+import requests
 import pandas as pd
-from spicy import stats
-
-## stats.spearmr
 
 def consultar_repositorios(page):
     token = ''

@@ -82,6 +82,9 @@ for i in range(0, 1000, 20):
   if dados:
       dados_totais.append(dados)
 
-os.system('cmd /c "java -jar ck-x.x.x-SNAPSHOT-jar-with-dependencies.jar Snailclimb/JavaGuide <use jars:true|false> <max files per partition, 0=automatic selection> <variables and fields metrics? True|False> <output dir> [ignored directories...]"')
+pacote = 'Snailclimb/JavaGuide'
+os.system(f'cmd "git clone https://github.com/{pacote}"')
+
+##os.system('cmd /c "java -jar ck-x.x.x-SNAPSHOT-jar-with-dependencies.jar Snailclimb/JavaGuide <use jars:true|false> <max files per partition, 0=automatic selection> <variables and fields metrics? True|False> <output dir> [ignored directories...]"')
 
 exportar_para_csv(dados_totais)

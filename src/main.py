@@ -1,6 +1,7 @@
 import requests
 import pandas as pd
 import os
+from spicy import stats
 
 def consultar_repositorios(page):
     token = ''
@@ -82,9 +83,8 @@ for i in range(0, 1000, 20):
   if dados:
       dados_totais.append(dados)
 
-pacote = 'Snailclimb/JavaGuide'
+pacote = repositorios[0]
 os.system(f'cmd "git clone https://github.com/{pacote}"')
-
-##os.system('cmd /c "java -jar ck-x.x.x-SNAPSHOT-jar-with-dependencies.jar Snailclimb/JavaGuide <use jars:true|false> <max files per partition, 0=automatic selection> <variables and fields metrics? True|False> <output dir> [ignored directories...]"')
+os.system(f'cmd "java -jar ./target/ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar ../{pacote}/ true 0 true ../../results/"')
 
 exportar_para_csv(dados_totais)

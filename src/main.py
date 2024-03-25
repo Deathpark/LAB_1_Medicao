@@ -83,8 +83,10 @@ for i in range(0, 1000, 20):
   if dados:
       dados_totais.append(dados)
 
-pacote = repositorios[0]
-os.system(f'cmd "git clone https://github.com/{pacote}"')
-os.system(f'cmd "java -jar ./target/ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar ../{pacote}/ true 0 true ../../results/"')
-
 exportar_para_csv(dados_totais)
+
+pacote = repositorios[1]
+projeto = pacote.split("/")
+os.system(f'git clone https://github.com/{pacote}')
+os.system(f'java -jar ./ck/target/ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar ./{projeto[1]}/ true 0 true ./results/')
+os.system(f'rm -rf ../{pacote}')

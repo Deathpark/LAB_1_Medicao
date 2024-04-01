@@ -49,6 +49,7 @@ Elabore um documento que apresente
 * Richbert Stephano de Faria Oliveira
 * Sara Lourenço Iglesias
 * Nelson Nolasco
+* Yghor Ribas Gomes
 
 ## Artefatos:
 

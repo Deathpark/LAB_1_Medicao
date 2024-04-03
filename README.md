@@ -38,6 +38,12 @@ Por conta de sua robustez e compatibilidade ela foi adotada por muitos times de 
 
 #### Metodologia
 **Ferramentas:**
+* [Python](https://www.python.org/)
+* [Github GraphQL API](https://docs.github.com/pt/graphql/reference/queries)
+* [ck](https://github.com/mauricioaniche/ck)
+
+
+**Método:** 
 
 (iii) os resultados obtidos para cada uma delas; 
 (iv) a discussão sobre o que você esperava como resultado (suas hipóteses) e os valores obtidos.  

@@ -7,16 +7,16 @@ Por conta de sua robustez e compatibilidade ela foi adotada por muitos times de 
 
 As seguintes perguntas foram definidas para essa pesquisa e a partir delas definimos hipóteses dos resultados
 
-RQ 01. Qual a relação entre a popularidade dos repositórios e as suas características de qualidade?
+RQ 01: Qual a relação entre a popularidade dos repositórios e as suas características de qualidade?\
 HI 01: Repositórios de Java mais populares, medidos pelo número de estrelas, forks e contribuidores, tendem a ter uma maior qualidade de código devido a maior contribuições da comunidade, resultando em menos defeitos e melhor documentação.
 
-RQ 02. Qual a relação entre a maturidade do repositórios e as suas características de qualidade ? 
+RQ 02: Qual a relação entre a maturidade do repositórios e as suas características de qualidade?\
 HI 02: Repositórios de Java mais maduros, medidos pela idade desde sua criação,  provavelmente têm uma qualidade de código melhor, pois passaram por mais ciclos de desenvolvimento, revisões e refinamentos ao longo do tempo.
 
-RQ 03. Qual a relação entre a atividade dos repositórios e as suas características de qualidade?  
+RQ 03: Qual a relação entre a atividade dos repositórios e as suas características de qualidade?\
 HI 03: Repositórios de Java mais ativos, caracterizados por uma alta frequência de commits, issues abertos e resolvidos, e pull requests aceitos, provavelmente têm uma qualidade de código superior devido à constante manutenção e melhoria contínua do código fonte.
 
-RQ 04. Qual a relação entre o tamanho dos repositórios e as suas características de qualidade?  
+RQ 04: Qual a relação entre o tamanho dos repositórios e as suas características de qualidade?\
 HI 04: Repositórios de Java com um maior número de linhas de código (LOC) podem ter uma qualidade de código variável. Embora repositórios maiores possam conter mais funcionalidades e soluções complexas, aumentando a probabilidade de bugs, mas ainda sim possuir uma robustez e boas práticas. Portanto, a qualidade de um repositório pode depender não apenas do tamanho absoluto, mas como isso está refletindo a clareza e a manutenibilidade do código.
 
 #### Metodologia
@@ -27,6 +27,48 @@ HI 04: Repositórios de Java com um maior número de linhas de código (LOC) pod
 
 A partir da query:
 
+    query pesquisa($page: String){
+      search(query: "stars:>100 language:Java fork:false sort:stars-desc", type: REPOSITORY, first: 20, after: $page) {
+        repositoryCount
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          ... on Repository {
+            nameWithOwner
+            createdAt
+            pullRequests {
+              totalCount
+            }
+            releases {
+              totalCount
+            }
+            updatedAt
+            primaryLanguage {
+              name
+            }
+            issues (states: OPEN){
+              totalCount
+            }
+            closedIssues: issues(states: CLOSED) {
+              totalCount
+            }
+          }
+        }
+      }
+    }
+
+Foram recolhidos os repositórios desejados pela api do _github_ e armazenados em um arquivo de texto como uma tabela csv.
+
+Com o link de cada repositório foi utilizado um script para calcular a qualidade do código com algumas métricas recolhidas pela ferramenta ck:
+
+ # SCRIPT AQUI
+
+ As métricas analisadas nesse trabalho foram:
+* CBO: Coupling between objects
+* DIT: Depth Inheritance Tree
+* LCOM: Lack of Cohesion of Methods
 
 (iii) os resultados obtidos para cada uma delas; 
 (iv) a discussão sobre o que você esperava como resultado (suas hipóteses) e os valores obtidos.  

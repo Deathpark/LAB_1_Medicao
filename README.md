@@ -63,7 +63,42 @@ Foram recolhidos os repositórios desejados pela api do _github_ e armazenados e
 
 Com o link de cada repositório foi utilizado um script para calcular a qualidade do código com algumas métricas recolhidas pela ferramenta ck:
 
- # SCRIPT AQUI
+    dadosMetricas = []
+    for i in range(0, 1000):
+      pacote = repositorios[i]
+      projeto = pacote.split("/")
+      os.system(f'git clone https://github.com/{pacote}')
+      os.system(f'java -jar ./ck/target/ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar ./{projeto[1]}/ true 0 true ./results/')
+      os.system(f'rm -rf ./{pacote}')
+    
+      # Lê os dados de class
+      with open('./results/class.csv', 'r') as arquivo:
+        linhas = arquivo.readlines()
+        contador = 0
+        cboSys = 0
+        ditSys = 0
+        lcomSys = 0
+        for linha in linhas:
+          if(contador > 0 and (not linha.isspace())):
+            dados = linha.split(",")
+            cbo = dados[3]
+            cboModified = dados[4]
+            dit = dados[8]
+            lcom = dados[11]
+            lcom2 = dados[12]
+            
+            if(cboSys < cbo):
+              cboSys = cbo
+            if(ditSys < dit):
+              ditSys = dit
+            if(lcomSys < lcom):
+              lcomSys = lcom
+        
+        if(cboSys != 0 or ditSys != 0 or lcomSys != 0):
+          metrica = "Projeto: " + pacote + ", CBO: " + cboSys + ", DIT:" + ditSys + ", LCOM:" + lcomSys
+          dadosMetricas.append(metrica)
+    
+    exportar_para_csv(dados_totais, 'metricas.csv')
 
  As métricas analisadas nesse trabalho foram:
 * CBO: Coupling between objects

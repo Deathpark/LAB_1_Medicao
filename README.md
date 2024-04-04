@@ -117,7 +117,6 @@ Com o link de cada repositório foi utilizado um script para calcular a qualidad
 
 * Richbert Stephano de Faria Oliveira
 * Sara Lourenço Iglesias
-* Nelson Nolasco
 * Yghor Ribas Gomes
 
 ## Artefatos:
